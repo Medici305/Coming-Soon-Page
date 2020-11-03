@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+.main-box {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: none;
+}
+.main-box .left-side {
+  flex: 0.65;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: none;
+}
+.main-box .left-side .inner-box {
+  flex: 0.6;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-box .left-side .inner-box .logo {
+  flex: 0.2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-box .left-side .inner-box .form {
+  flex: 0.8;
+  text-align: center;
+}
+.main-box .left-side .inner-box .form h1 {
+  font-size: 5rem;
+  letter-spacing: 1.2rem;
+  color: #413a3a;
+}
+.main-box .left-side .inner-box .form h1 span {
+  color: #ce9797;
+  font-weight: 300;
+}
+.main-box .left-side .inner-box .form p {
+  color: #ce9797;
+  font-size: 1.3rem;
+  word-spacing: 0.25rem;
+}
+.main-box .left-side .inner-box .form #form {
+  margin-top: 2rem;
+}
+.main-box .left-side .inner-box .form #form button {
+  background-color: #ce9797;
+}
+.main-box .right-side {
+  flex: 0.359;
+  background-image: url("../images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-box {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: none;
+    align-items: none;
+  }
+  .main-box .left-side {
+    flex: 0.6;
+  }
+  .main-box .left-side .inner-box .form h1 {
+    font-size: 3rem;
+  }
+  .main-box .left-side .inner-box .form p {
+    font-size: 0.9rem;
+  }
+  .main-box .right-side {
+    flex: 0.4;
+    background-image: url("../images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(none);
+    background-repeat: no-repeat;
+    background-position: none;
+    background-size: none;
+    background-attachment: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .main-box .right-side #base-logo {
+    margin-top: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

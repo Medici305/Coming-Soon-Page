@@ -1,0 +1,23 @@
+@mixin border($size, $color) {
+    border: $size solid $color;
+}
+
+@mixin dimension($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin backgroundImage($file, $position, $size, $fixed) {
+    background-image: url($file);
+    background-repeat: no-repeat;
+    background-position: $position;
+    background-size: $size;
+    background-attachment: $fixed;
+}
+
+@mixin flex($display: flex, $direction: row, $justify: none, $align: none) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

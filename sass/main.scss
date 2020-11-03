@@ -1,0 +1,97 @@
+@import 'components/mixin/mixin';
+@import 'components/placeholder/placeholders';
+@import 'components/variable/variables';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+.main-box {
+    @include dimension(100vh, auto);
+    @include flex();
+    .left-side {
+        flex: 0.65;
+        @include flex(flex,row,center,flex-start);
+        @include backgroundImage('../images/bg-pattern-desktop.svg', center center, cover, none);
+        .inner-box {
+            flex: 0.6;
+            height: 85%;
+            @include flex(flex, column, center, center);
+            .logo{
+                flex: 0.2;
+                @include flex(flex, row, flex-start, center);
+            }
+            .form {
+                flex: 0.8;
+                text-align: center;
+                h1 {
+                    font-size: 5rem;
+                    letter-spacing: 1.2rem;
+                    color: hsl(0, 6%, 24%);
+                    span {
+                        color: hsl(0, 36%, 70%);
+                        font-weight: 300;
+                    }
+                }
+                p {
+                    //color: hsl(0, 6%, 24%);
+                    color: hsl(0, 36%, 70%);
+                    font-size: 1.3rem;
+                    word-spacing: 0.25rem;
+                }
+                #form {
+                    margin-top: 2rem;
+                    button {
+                        background-color: hsl(0, 36%, 70%);
+                    }
+                }
+            }
+        }
+    }
+    .right-side {
+        flex: 0.359;
+        @include backgroundImage('../images/hero-desktop.jpg', center right, contain, fixed);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-box {
+        @include border(3px, black);
+        @include flex(flex, column-reverse);
+        .left-side {
+            flex: 0.6;
+            .inner-box {
+                .logo {
+
+                }
+                .form {
+                    h1 {
+                        font-size: 3rem;
+                        span {
+
+                        }
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
+                    #form {
+
+                    }
+                }
+            }
+        }
+        .right-side {
+            flex: 0.4;
+            @include backgroundImage('../images/hero-mobile.jpg', center right, cover, fixed);
+            @include backgroundImage(none,none,none,none);
+            @include flex(flex, column, space-between,flex-start);
+            #base-logo {
+                margin-top: .9rem;
+            }
+        }
+    }
+}

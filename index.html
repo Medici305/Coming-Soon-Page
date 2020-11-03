@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./node_modules/hover.css/css/hover.css">
+  <link rel="stylesheet" href="./sass/main.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section class="main-box">
+    <div class="left-side">
+      <div class="inner-box">
+        <div class="logo">
+          <img class="hide-on-small-and-down" src="./images/logo.svg" alt="logo">
+        </div>
+        <div class="form">
+          <h1 class="hvr-icon-spin"><span>WE'RE</span> COMING SOON</h1>
+          <p>
+            Hello fellow shoppers! We're currently builidng our new fashion store.
+            Add your email below to stay up to date with announcements and our deals.
+          </p>
+          <form id="form" action="#">
+            <div class="input-field">
+              <i class="material-icons prefix">mail_outline</i>
+              <input type="text" id="email">
+              <label for="email">Email Address</label>
+              <span id="text"></span>
+              <!--
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+                -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <img id="base-logo" src="./images/logo.svg" alt="" class="hide-on-med-and-up">
+      <img src="./images/hero-mobile.jpg" alt="" class="hide-on-med-and-up responsive-img">
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="./src/app.js"></script>
+</body>
+</html>
+
+<!--
+
+      <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+
+-->
