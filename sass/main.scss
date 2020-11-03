@@ -58,9 +58,14 @@
     }
 }
 
+/*
+@media only screen and (max-width: 600px) {
+}
+*/
+
+
 @media only screen and (max-width: 600px) {
     .main-box {
-        @include border(3px, black);
         @include flex(flex, column-reverse);
         .left-side {
             flex: 0.6;
@@ -85,8 +90,16 @@
             }
         }
         .right-side {
-            flex: 0.4;
-            @include backgroundImage('../images/hero-mobile.jpg', center right, cover, fixed);
+            flex: 0.4;  
+            @include flex(flex,column,center,center);
+            img:first-child {
+                align-self: center;
+            }
+            img:nth-child(2) {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            //@include backgroundImage('../images/hero-mobile.jpg', center right, cover, fixed);
             @include backgroundImage(none,none,none,none);
             @include flex(flex, column, space-between,flex-start);
             #base-logo {

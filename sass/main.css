@@ -74,9 +74,12 @@
   background-attachment: fixed;
 }
 
+/*
+@media only screen and (max-width: 600px) {
+}
+*/
 @media only screen and (max-width: 600px) {
   .main-box {
-    border: 3px solid black;
     display: flex;
     flex-direction: column-reverse;
     justify-content: none;
@@ -93,11 +96,10 @@
   }
   .main-box .right-side {
     flex: 0.4;
-    background-image: url("../images/hero-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: cover;
-    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url(none);
     background-repeat: no-repeat;
     background-position: none;
@@ -107,6 +109,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .main-box .right-side img:first-child {
+    align-self: center;
+  }
+  .main-box .right-side img:nth-child(2) {
+    width: 100%;
+    margin-top: 1rem;
   }
   .main-box .right-side #base-logo {
     margin-top: 0.9rem;
